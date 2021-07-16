@@ -1,0 +1,21 @@
+.card
+{
+    top:50px;
+    margin:auto;
+    width:50%;
+    height:400px;
+}
+.card-body
+{
+    top:50px;
+    margin:auto;
+    width:70%;
+    height:310px;
+}
+.btn-primary
+{
+    border: none;
+    padding: 12px 40px;
+
+}
+

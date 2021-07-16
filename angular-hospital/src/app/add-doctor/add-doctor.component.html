@@ -1,0 +1,138 @@
+<div class="card border-primary">
+  <div class="card-header text-center" style="color:#2f49b9;"><h3><b>
+    Add Doctor</b></h3>
+</div>
+<div class="card-body">
+
+<form
+  *ngIf="!isSuccessful"
+  name="form"
+  (ngSubmit)="f.form.valid && onSubmit()"
+  #f="ngForm"
+  novalidate
+>
+<div class="form-row">
+  <div class="form-group col-md-6">
+    <label for="doctorname"style="color:#2f49b9"><b>Doctor Name</b></label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter Doctor name"
+      name="doctorname"
+      [(ngModel)]="form.doctorname"
+      required
+      minlength="3"
+      maxlength="20"
+      #doctorname="ngModel"
+    /></div>
+    <div class="form-group col-md-6">
+        <label for="username"style="color:#2f49b9"><b>Username</b></label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Create Username"
+          name="username"
+          [(ngModel)]="form.username"
+          required
+          minlength="3"
+          maxlength="20"
+          #username="ngModel"
+        /></div>
+        </div>
+        <div class="form-group">
+            <label for="email" style="color:#2f49b9"><b>Email</b></label>
+            <input
+              type="email"
+              placeholder="Enter Email Address"
+              class="form-control"
+              name="email"
+              [(ngModel)]="form.email"
+              required
+              email
+              #email="ngModel"
+            /></div>
+            <div class="form-group">
+              <label for="hospital" style="color:#2f49b9"><b>Hospital Name</b></label>
+              <input
+                type="hospital"
+                placeholder="Enter Hospital Name"
+                class="form-control"
+                name="hospital"
+                [(ngModel)]="form.hospital"
+                #hospital="ngModel"
+              /></div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="specialization"style="color:#2f49b9"><b>Specialization</b></label>
+                  <input
+                    type="text"
+                    placeholder="Specify specialization"
+                    class="form-control"
+                    name="specialization"
+                    [(ngModel)]="form.specialization"
+                    required
+                    #specialization="ngModel"
+                  /></div>
+                    <div class="form-group col-md-6">
+                      <label for="experience"style="color:#2f49b9"><b>Experience</b></label>
+                      <input
+                        type="text"
+                        placeholder="Enter experience"
+                        class="form-control"
+                        name="experience"
+                        [(ngModel)]="form.experience"
+                        required
+                        #experience="ngModel"
+                      /></div></div>
+    
+      <div class="form-row">
+  <div class="form-group col-md-6">
+    <label for="phonenumber"style="color:#2f49b9"><b>Phone number</b></label>
+    <input
+      type="text"
+      placeholder="Enter contact number"
+      class="form-control"
+      name="phonenumber"
+      [(ngModel)]="form.phonenumber"
+      required
+      #phonenumber="ngModel"
+    /></div>
+      <div class="form-group col-md-6">
+        <label for="gender"style="color:#2f49b9"><b>Gender</b></label>
+        <input
+          type="text"
+          placeholder="Enter gender"
+          class="form-control"
+          name="gender"
+          [(ngModel)]="form.gender"
+          required
+          #gender="ngModel"
+        /></div></div>
+        <div class="form-group">
+            <label for="password" style="color:#2f49b9"><b>Password</b></label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              class="form-control"
+              name="password"
+              [(ngModel)]="form.password"
+              required
+              minlength="6"
+              #password="ngModel"
+            />
+        </div>
+        
+        
+          
+    
+  
+  <div class="form-group">
+    <button class="btn btn-primary btn-block">Submit</button>
+  </div>
+</form>
+  <div class="alert alert-success" *ngIf=isSuccessful>
+    Added Successfully 
+  </div>
+
+</div>
+</div>

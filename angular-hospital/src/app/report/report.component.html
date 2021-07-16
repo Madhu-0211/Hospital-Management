@@ -1,0 +1,95 @@
+<div class="card border-primary">
+  <div class="card-header text-center" style="color:#2f49b9;"><h3><b>
+    Report</b></h3>
+</div>
+<div class="card-body">
+
+<form
+  *ngIf="!isSuccessful"
+  name="form"
+  (ngSubmit)="f.form.valid && onSubmit()"
+  #f="ngForm"
+  novalidate
+>
+  <div class="form-group">
+    <label for="patientname"style="color:#2f49b9">Patient Name</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter patient name"
+      name="patientname"
+      [(ngModel)]="details.patientname"
+      required
+      minlength="3"
+      maxlength="20"
+      #patientname="ngModel"
+    /></div>
+    <div class="form-group">
+      <label for="appointmentdate"style="color:#2f49b9">Appointment Date</label>
+      <input
+        type="date"
+        placeholder="Enter Appointment date"
+        class="form-control"
+        name="appointmentdate"
+        [(ngModel)]="details.appointmentdate"
+        required
+        #appointmentdate="ngModel"
+      /></div>
+      <div class="form-row">
+  <div class="form-group col-md-6">
+    <label for="phonenumber"style="color:#2f49b9">Phone number</label>
+    <input
+      type="text"
+      placeholder="Enter contact number"
+      class="form-control"
+      name="phonenumber"
+      [(ngModel)]="details.phonenumber"
+      required
+      #phonenumber="ngModel"
+    /></div>
+      <div class="form-group col-md-6">
+        <label for="age"style="color:#2f49b9">Age</label>
+        <input
+          type="text"
+          placeholder="Enter your age"
+          class="form-control"
+          name="age"
+          [(ngModel)]="details.age"
+          required
+          #age="ngModel"
+        /></div></div>
+        
+        <div class="form-group">
+          <label for="reason"style="color:#2f49b9">Reason</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter your Reason"
+            name="reason"
+            [(ngModel)]="details.reason"
+            required
+            #reason="ngModel"
+          /></div>
+          <div class="form-group">
+            <label for="prescription"style="color:#2f49b9">Prescription</label>
+            <input
+              type="description"
+              class="form-control"
+              name="prescription"
+              [(ngModel)]="form.prescription"
+              required
+              #prescription="ngModel"
+            /></div>
+          
+    
+  
+  <div class="form-group">
+    <button class="btn btn-primary btn-block">Submit</button>
+  </div>
+</form>
+  <div class="alert alert-success" *ngIf=isSuccessful>
+    Report Submitted 
+  </div>
+
+</div>
+</div>

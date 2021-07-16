@@ -1,0 +1,22 @@
+<div class="card border-secondary" >
+    <div class="card-body" *ngIf="currentUser; else loggedOut">
+      <div class="card-header text-center" style="color:#2f49b9;"><h3><b>
+        Profile Details</b></h3>
+    </div>
+        <ul class="list-group list-group-flush">
+          <p><i class="fas fa-id-card"></i><strong> Id: </strong><label style="color:#2f49b9;">{{currentUser.id}}</label></p>
+            <p><i class="far fa-user"></i><strong> Username: </strong><label style="color:#2f49b9;">{{ currentUser.username }}</label></p>
+    
+      <p><i class="far fa-envelope"></i><strong> Email Address: </strong><label style="color:#2f49b9;">{{ currentUser.email }}</label></p>
+      <p><i class="fas fa-phone"></i><strong> Phone Number: </strong><label style="color:#2f49b9;">{{ currentUser.phonenumber }}</label></p>
+        <p><i class="fas fa-user-tag"></i><strong> Role:</strong><label style="color:#2f49b9;">{{ currentUser.role}}</label></p>
+          </ul>
+          <div class="card-footer text-center">
+        <a href="editprofile/{{currentUser.id}}" class='btn btn-primary' router="editprofile">Edit</a>
+        </div>
+    </div>
+    </div>
+      
+      <ng-template #loggedOut>
+        Please login.
+      </ng-template>

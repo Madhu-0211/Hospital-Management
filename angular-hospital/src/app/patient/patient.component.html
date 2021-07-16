@@ -1,0 +1,34 @@
+<div class="container">  
+    <h3 style="text-align:center;color:#2f49b9"><b>Patients List</b></h3></div>
+    <div class="container1">
+    <table class="table table-striped">  
+        <thead class="thead-dark">  
+            <tr>  
+              <th>ID</th> 
+          <th>Name</th>  
+          <th>Phone Number</th> 
+          <th>Email Address</th> 
+          <th>Manage</th>
+        
+        </tr>  
+    </thead>  
+    <tbody>
+         <tr *ngFor="let i of d">
+        
+          <td>{{ i.id }}</td>
+          <td>{{ i.username }}</td>
+          <td>{{ i.phonenumber }}</td>
+          <td>{{ i.email }}</td>
+          
+          <td class="edit">
+            
+            <button (click)=deletePatient(i.id) class="btn btn-dark" >Delete</button>&nbsp;
+            <a href="/editpatient/{{i.id}}" class='btn btn-primary' router="editpatient">Update</a>
+          </td>
+          
+        </tr> 
+      </tbody>
+    </table>
+  
+</div>  
+

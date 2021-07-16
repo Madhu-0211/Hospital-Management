@@ -1,0 +1,19 @@
+.list-group
+{
+    font-size:20px;;
+}
+label{
+    font-weight:bold;
+}
+.card
+{
+    top:50px;
+    margin:auto;
+    width:50%;
+}
+.btn-primary
+{
+    border: none;
+    padding: 12px 40px;
+
+}

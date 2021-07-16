@@ -1,0 +1,20 @@
+.card
+{
+    top:50px;
+    margin:auto;
+    width:60%;
+    height:600px;
+}
+.card-body
+{
+    top:50px;
+    margin:auto;
+    width:70%;
+    height:500px;
+}
+.btn-primary
+{
+    border: none;
+    padding: 12px 40px;
+
+}

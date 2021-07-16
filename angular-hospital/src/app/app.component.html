@@ -1,0 +1,59 @@
+<div id="app">
+  <nav class="navbar navbar-expand navbar-dark" style="background-color:#2f49b9;">
+    
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <a href="/home" class="nav-link" routerLink="home">Home</a>
+      </li>
+      <li class="nav-item dropdown" *ngIf="showAdmin">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+        aria-expanded="false"
+        >Manage Doctors
+      </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <li><a class="dropdown-item" href="/doctors" routerlink="doctors">Doctors List</a></li>
+        <div class="dropdown-divider"></div>
+        <li><a class="dropdown-item" href="/adddoctor" routerlink="adddoctor" >Add Doctor</a></li>
+        </ul>
+    </li>
+      <li class="nav-item" *ngIf="showAdmin">
+        <a href="/patient" class="nav-link" routerLink="patient">Patients</a>
+      </li>
+      <li class="nav-item" *ngIf="showDoctor">
+        <a href="/appointmentrequest" class="nav-link" routerLink="appointmentrequest">Appointment Requests</a>
+      </li>
+      <li class="nav-item" *ngIf="showPatient">
+        <a href="/doctors" class="nav-link" *ngIf="isLoggedIn" routerLink="doctors">Doctors</a>
+        
+      </li>
+      <li class="nav-item" *ngIf="showPatient">
+        <a href="/appointmentresponse" class="nav-link" *ngIf="isLoggedIn" routerlink="appointmentresponse">Appointment Response</a>
+        
+      </li>
+      
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a href="/login" class="nav-link" routerLink="login">Login</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      
+      <li class="nav-item">
+        <a href="/profile" class="nav-link" routerLink="profile">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">LogOut</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.table .thead-dark th {
+    
+    background-color: #2f49b9;}
+    .container
+    {
+        position: relative;
+        margin:auto;
+        top:20px;
+        
+    }
+    .container1 {
+        position: relative;
+        margin:auto;
+        top:50px;
+        border-style: solid;
+        border-width: medium;
+        
+      }
+      .btn-primary
+      {
+        background-color:#2f49b9;
+      }
